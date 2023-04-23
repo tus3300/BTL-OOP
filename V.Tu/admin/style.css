@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: cyan;
+    outline: white;
+
+}
+a{
+    text-decoration: black;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    height: 100px;
+    width: 100vw;
+    border-bottom: 2px solid #dddd;
+    text-align: center;
+}
+.admin-content{
+    padding-top: 50px;
+    display: flex;
+}
+.admin-content-left{
+    background-color: black;
+    width: 20%;
+    height: 100vh;
+    padding: 30px 0 0 12px;
+}
+.admin-content-left>ul>li>a{
+    font-weight: bold;
+}

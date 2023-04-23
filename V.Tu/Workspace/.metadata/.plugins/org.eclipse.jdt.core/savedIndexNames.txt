@@ -1,5 +1,0 @@
-INDEX VERSION 1.132+C:\JavaFX\Web ban hang\Workspace\.metadata\.plugins\org.eclipse.jdt.core
-3698752356.index
-1865797976.index
-1934814768.index
-3959137331.index
