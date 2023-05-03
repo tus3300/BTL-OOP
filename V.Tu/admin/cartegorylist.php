@@ -5,7 +5,7 @@ include "class/category-class.php";
 ?> 
 <?php
 $cartegory = new cartegory;
-$show_cartegory = $cartegory ->show_cartegory();
+$show_cartegory = $cartegory->show_cartegory();
 ?>    
 
 <div class="admin-content-right">
@@ -23,18 +23,18 @@ $show_cartegory = $cartegory ->show_cartegory();
                         $i=0;
                         while($result = $show_cartegory->fetch_assoc()){
                             $i++;
-                        }
-                    }
                     ?>
                     <tr>
                         <td><?php echo $i ?></td>
                         <td><?php echo $result['cartegory_id']?></td>
                         <td><?php echo $result['cartegory_name']?></td>
-                        <td><a href="">Sua</a>|
-                            <a href="">Xoa</a>
+                        <td><a href="cartegoryedit.php?cartegory_id=<?php echo $result['cartegory_id']?>">Sua</a>|
+                            <a href="cartegorydelete.php?cartegory_id=<?php echo $result['cartegory_id']?>">Xoa</a>
                         </td>
                     </tr>
                     <?php 
+                        }
+                    }
                     ?>
                 </table>
             </div>
