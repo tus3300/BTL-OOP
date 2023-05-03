@@ -25,8 +25,9 @@ Class Session{
             header("Location:index.php");
         }
     }
-    public static destroy(){
+    public static function destroy(){
         session_destroy();
         header("Location:index.php");
     }
-}?>
+}
+?>
