@@ -39,8 +39,25 @@
         <div class="admin-content-right">
             <div class="admin-content-right-product_add">
                 <h1>Thêm sản phẩm</h1>
-                <form action="" method="POST">
-                    <input type="text" placeholder="Nhập tên">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <label for="">Nhập tên sp<span style="color: red;">*</span></label>
+                    <input required type="text">
+                    <label for="">Chọn Danh mục<span style="color: red;">*</span></label>
+                    <select name="" id="">
+                        <option value="#">--Chọn--</option>
+                    </select>
+                    <label for="">Chọn loại sp<span style="color: red;">*</span></label>
+                    <select name="" id="">
+                        <option value="#">--Chọn--</option>
+                    </select>
+                    <label for="">Giá sp<span style="color: red;">*</span></label>
+                    <input required type="text">
+                    <label for="">Sale off<span style="color: red;">*</span></label>
+                    <input required type="text">
+                    <label for="">Mô tả sp<span style="color: red;">*</span></label>
+                    <textarea requied name="" id="" cols="20" rows="10"></textarea>
+                    <label for="">ảnh mô tả<span style="color: red;">*</span></label>
+                    <input required multiple type="file">
                     <button style="background-color:red;color:white";type="submit">Add</button>
                 </form>
             </div>

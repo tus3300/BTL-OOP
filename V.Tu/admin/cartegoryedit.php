@@ -1,7 +1,7 @@
 <?php
 include "header.php";
 include "slider.php";
-include "class/category-class.php";
+include "class/category_class.php";
 ?> 
 <?php
 if (!isset($_GET['cartegory_id']) || $_GET['cartegory_id'] == NULL){
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
         <div class="admin-content-right-carterogy">
                 <h1>Them danh muc</h1>
                 <form action="" method="POST">
-                    <input name ="cartegory_name" type="text" placeholder="Nhap ten" 
+                    <input name ="cartegory_name" type="text" placeholder="Nhập tên" 
                     value="<?php 
                     echo $result['$cartegory_name'];
                     ?>">

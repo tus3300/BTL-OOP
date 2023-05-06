@@ -22,8 +22,9 @@ class cartegory{
     }
     
     public function get_cartegory($cartegory_id) {
-        $query = "SELECT * FROM tbl_category WHERE cartegory_id = $cartegory_id";
+        $query = "SELECT tbl_brand*,tbl_cartegory.cartegory_name  FROM tbl_bradn INNER JOIN tbl_cartegory ON tbl_brand.cartegory_id=tbl_cartegory.cartegory_id ORDER BY tbl_brand.brand_id DESC ";
         $result = $this->db->select($query);
+        header('Location:brandlist.php');
         return $result;
     }
     public function update_cartegory($cartegory_name,$cartegory_id){

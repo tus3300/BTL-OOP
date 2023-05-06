@@ -72,3 +72,34 @@ header{
 table{
     border-collapse :collapse;
 }
+.admin-content-right-product_add h1{
+    margin-bottom: 20px;
+}
+.admin-content-right-product_add input,select{
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 12px 0 12px;
+}
+.admin-content-right-product_add textarea{
+    display: block;
+    width: 500px;
+    height: 200px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+.admin-content-right-product_add button{
+    display: block;
+    height: 30px;
+    width: 120px;
+    cursor: pointer;
+    border: none;
+    background-color: red;
+    color: white;
+    transition: all 0.3 ease;
+}
+.admin-content-right-product_add button:hover{
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+}

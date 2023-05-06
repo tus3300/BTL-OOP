@@ -5,18 +5,18 @@ include "class/brand_class.php";
 ?> 
 <?php
 $brand = new brand;
-$show_cartegory = $cartegory->show_brand();
+$show_brand = $brand->show_brand();
 ?>    
 
 <div class="admin-content-right">
 <div class="admin-content-right-carterogy_list">
-                <h1>Danh sach danh muc</h1>
+                <h1>Danh sach loai sp</h1>
                 <table>
                     <tr>
                         <th>Stt</th>
                         <th>ID</th>
                         <th>Danh muc</th>
-                        <th>cartegory-id</th>
+                        <th>Loai sp</th>
                         <th>Dieu chinh</th>
                     </tr>
                     <?php

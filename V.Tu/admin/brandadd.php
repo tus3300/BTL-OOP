@@ -19,10 +19,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 </style>  
 <div class="admin-content-right">
         <div class="admin-content-right-carterogy">
-                <h1>Them danh muc</h1><br>
+                <h1>Thêm danh mục</h1><br>
                 <form action="" method="POST">
                     <select name="cartegory_id" id="">
-                        <option value="#">--Chon danh muc</option>
+                        <option value="#">--Chọn danh mục</option>
                         <?php
                             $show_cartegory = $brand->show_cartegory();
                             if($show_cartegory){
@@ -35,7 +35,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
                         }
                         ?>
                     </select><br>
-                    <input name ="brand_name" type="text" placeholder="Nhap ten loai sp">
+                    <input name ="brand_name" type="text" placeholder="Nhập tên loại sp">
                     <button style="background-color:red;border:cyan;color:white";type="submit">Add</button>
                 </form>
             </div>

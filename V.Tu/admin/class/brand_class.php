@@ -24,21 +24,26 @@ class brand{
         $result = $this->db->select($query);
         return $result;
     }
+    public function get_brand($brand_id) {
+        $query = "SELECT * FROM tbl_brand WHERE brand_id = $brand_id";
+        $result = $this->db->select($query);
+        return $result;
+    }
     public function get_cartegory($cartegory_id) {
         $query = "SELECT * FROM tbl_category WHERE cartegory_id = $cartegory_id";
         $result = $this->db->select($query);
         return $result;
     }
-    public function update_cartegory($cartegory_name,$cartegory_id){
-        $query = "UPDATE tbl_category SET cartegory_name = $cartegory_name WHERE cartegory_id = '$cartegory_id' ";
+    public function update_brand($cartegory_id,$brand_name,$brand_id){
+        $query = "UPDATE tbl_brand SET brand_name = '$brand_name',cartegory_id = '$cartegory_id' WHERE brand_id = '$brand_id' ";
         $result = $this->db->update($query);
-        header('Location:cartegorylist.php');
+        header('Location:brandlist.php');
         return $result;
     }
-    public function delete_cartegory($cartegory_id){
-        $query = "DELETE FROM tbl_category WHERE cartegory_id = '$cartegory_id' ";
+    public function delete_brand($brand_id){
+        $query = "DELETE FROM tbl_brand WHERE brand_id = '$brand_id' ";
         $result = $this->db->delete($query);
-        header('Location:cartegorylist.php');
+        header('Location:brandlist.php');
         return $result;
     }
 }
