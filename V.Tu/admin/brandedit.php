@@ -26,10 +26,10 @@ include "class/brand_class.php";
 </style>  
 <div class="admin-content-right">
         <div class="admin-content-right-carterogy">
-                <h1>Them danh muc</h1><br>
+                <h1>Thêm danh mục</h1><br>
                 <form action="" method="POST">
                     <select name="cartegory_id" id="">
-                        <option value="#">--Chon danh muc</option>
+                        <option value="#">--Chọn danh mục</option>
                         <?php
                             $show_cartegory = $brand->show_cartegory();
                             if($show_cartegory){
@@ -42,12 +42,12 @@ include "class/brand_class.php";
                         }
                         ?>
                     </select><br>
-                    <input name ="brand_name" type="text" placeholder="Nhap ten loai sp" value =" <?php echo $result1['brand_name'] ?>">
-                    <button style="background-color:red;border:cyan;color:white";type="submit">Sua</button>
+                    <input name ="brand_name" type="text" placeholder="Nhập tên loại sp" value =" <?php echo $result1['brand_name'] ?>">
+                    <button style="background-color:red;border:cyan;color:white";type="submit">Sửa</button>
                 </form>
             </div>
         </div>
     </section>
 
 </body>
-</html>
+</html>  

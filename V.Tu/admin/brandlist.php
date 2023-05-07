@@ -10,14 +10,14 @@ $show_brand = $brand->show_brand();
 
 <div class="admin-content-right">
 <div class="admin-content-right-carterogy_list">
-                <h1>Danh sach loai sp</h1>
+                <h1>Danh sách loại sp</h1>
                 <table>
                     <tr>
                         <th>Stt</th>
                         <th>ID</th>
-                        <th>Danh muc</th>
-                        <th>Loai sp</th>
-                        <th>Dieu chinh</th>
+                        <th>Danh mục</th>
+                        <th>Loại sp</th>
+                        <th>Điều chỉnh</th>
                     </tr>
                     <?php
                     if($show_brand){
@@ -30,8 +30,8 @@ $show_brand = $brand->show_brand();
                         <td><?php echo $result['brand_id']?></td>
                         <td><?php echo $result['cartegory_name']?></td>
                         <td><?php echo $result['brand_name']?></td>
-                        <td><a href="brandedit.php?brand_id=<?php echo $result['brand_id']?>">Sua</a>|
-                            <a href="branddelete.php?brand_id=<?php echo $result['brand_id']?>">Xoa</a>
+                        <td><a href="brandedit.php?brand_id=<?php echo $result['brand_id']?>">Sửa</a>|
+                            <a href="branddelete.php?brand_id=<?php echo $result['brand_id']?>">Xóa</a>
                         </td>
                     </tr>
                     <?php 

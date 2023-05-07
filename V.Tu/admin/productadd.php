@@ -7,8 +7,7 @@ include "class/product_class.php";
 <?php
 $product = new product;
 if($_SERVER['REQUEST_METHOD']==='POST'){
-    $insert_product = $product -> insert_product($_POST,$_FILES);
-    
+    $insert_product = $product -> insert_product($_POST,$_FILES) ;
 }
 ?> 
 <div class="admin-content-right">
@@ -18,7 +17,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
                     <label for="">Nhập tên sp<span style="color: red;">*</span></label>
                     <input name="product_name" required type="text">
                     <label for="">Chọn Danh mục<span style="color: red;">*</span></label>
-                    <select name="cartegory_id" id="">
+                    <select name="cartegory_id" id="cartegory_id">
                         <option value="#">--Chọn--</option>
                         <?php 
                             $show_cartegory = $product ->show_cartegory();
@@ -47,11 +46,18 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
                     <label for="">Sale off<span style="color: red;">*</span></label>
                     <input name="price_saleoff" required type="text">
                     <label for="">Mô tả sp<span style="color: red;">*</span></label>
-                    <textarea required name="product_desc" id="" cols="20" rows="10"></textarea>
+                    <textarea required name="product_desc" id="editor1" cols="20" rows="10"></textarea>
                     <label for="">ảnh sp<span style="color: red;">*</span></label>
                     <input name="product_img" required multiple type="file">
                     <label for="">ảnh mô tả sp<span style="color: red;">*</span></label>
-                    <input name="product_img_desc" required multiple type="file">
+                    <input name="product_img_desc[]" required multiple type="file">
+
+                    <span style = "color: red"></span>
+                        <?php if(isset($insert_product)){
+                                echo($insert_product);
+                            }
+                        ?>
+                    </span>
                     <button style="background-color:red;color:white";type="submit">Add</button>
                 </form>
             </div>
@@ -59,4 +65,24 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     </section>
 
 </body>
+
+
+<script>
+        CKEDITOR.replace( 'editor1', {
+    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+} );
+
+</script>
+<script>
+    $(document).ready{
+        $("#cartegory_id").change(function(){
+            var x = $(this).val();
+            $.get"productadd_ajax",{cartegory_id:x},function(data){
+                $("#brand_id").html(data);
+            })
+        })
+    }
+</script>
+
 </html>
