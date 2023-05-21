@@ -46,11 +46,6 @@
         padding: 8px 15px;
         transition-duration: .15s;
     }
-    .top-nav-quicklink ul li a img {
-            vertical-align: middle;
-            width: 15px;
-            padding: 8px;
-    }
     .top-nav-quicklink li a:hover {
         padding-top: 4px; 
         border-bottom: 4px solid #000;
