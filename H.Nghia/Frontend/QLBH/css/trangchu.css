@@ -1,0 +1,73 @@
+
+/* Các khung sản phẩm */
+.contain-KhungSanPham {
+	
+}
+
+.KhungSanPham {
+	border-color: #ff4d00;
+	width: 100%;
+	margin: 50px 0;
+	border-radius: 5px;
+	border: 2px solid #ff4d00; 
+	box-sizing: border-box; /* dùng để width ko vượt ra ngoài khi có border */
+}
+
+.KhungSanPham h3.tenKhung {
+	line-height: 1.5em;
+	font-size: 1.5em;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 1em;
+	color: black;
+	transform: translateY(-0.75em);
+}
+.tenKhung {
+	background-image:  linear-gradient(120deg, #ff9c00 0%,#34b7eb 50%, #ff9c00 100%);
+
+}
+.KhungSanPham li {
+	list-style-type: none; 
+}
+.SanPham h3 {
+	display: block;
+    padding: 0 10px;
+    color: #333;
+    line-height: 1.3em;
+    font-size: 15px;
+    font-weight: normal;
+}
+.SanPham a img {
+	display:block;
+	margin: 15px auto;
+	transition-duration: 0.2s;
+	width:200px;
+	height: 200px;
+}
+.flexContain {
+	display:flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-orient: normal;
+	flex-direction: row;
+	-webkit-box-pack:center;
+}
+
+/* Nút xem tất cả */
+.xemTatCa {
+	display: block;
+	font-weight: bold;
+	text-align: center;
+	/* max-width: 25%; */
+	margin:	0 auto;
+	padding: .5em 1em;
+	border-radius: 1em;
+	color: #888;
+	background-color: #eee;
+	transition-duration: .2s;
+	transform: translateY(1em);
+}
+.xemTatCa:hover {
+	background-color: #ccc;
+	color: #000;
+}

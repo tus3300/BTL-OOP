@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="shortcut icon" href="images/products/logo-KayTiEn_photos_v2_x4.jpg" />
+
+      <!-- css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/topnav.css">
+      <link rel="stylesheet" href="css/header.css">
+      <link rel="stylesheet" href="css/taikhoan.css">
+      <link rel="stylesheet" href="css/footer.css">
+      <link rel="stylesheet" href="css/lienhe.css">
+  
+      <!-- js -->
+      <script src="data/products.js"></script>
+      <script src="js/dungchung.js"></script>
+      <script src="js/lienhe.js"></script>
+</head>
+
+<body>
+    <script> addTopNav();</script>
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+        <div class="body-lienhe">
+            <div class="lienhe-header">Liên Hệ</div>
+            <div class="lienhe-info">
+                <div class="info-left">
+                    <p>
+                        <h2 style="color: gray"> SHOP </h2><br>
+                        <b>Địa chỉ:</b> Trường Đại Học Phenikaa Hà Nội<br /><br>
+                        <b>Telephone:</b> 0967896789<br /><br>
+                        <b>Email:</b> Banhang5@gmail.com<br /><br>
+                        <b>Tài Khoản Ngân Hàng:</b> MB Bank<br /><br>
+                        <b>Số Tài Khoảng:</b>6666777888999 <br /><br>
+                    </p>
+
+                </div>
+                <div class="info-right">
+                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=P.%20Nguy%E1%BB%85n%20Tr%C3%A1c,%20Y%C3%AAn%20Ngh%C4%A9a,%20H%C3%A0%20%C4%90%C3%B4ng,%20H%C3%A0%20N%E1%BB%99i,%20Vi%E1%BB%87t%20Nam+(Phenikaa%20University)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        <a href="https://www.maps.ie/distance-area-calculator.html">area maps</a>
+                    </iframe>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        <div class="lienhe-info">
+
+            <div class="guithongtin">
+                <p style="font-size: 22px; color: gray">Gửi thông tin liên lạc cho chúng tôi: </p>
+                <hr />
+                <form name="formlh" onsubmit="return nguoidung()">
+                    <table cellspacing="10px">
+                        <tr>
+                            <td>Họ và tên</td>
+                            <td><input type="text" name="ht" size="40" maxlength="40" placeholder="Họ tên"
+                                    autocomplete="off" required></td>
+                        </tr>
+                        <tr>
+                            <td>Điện thoại liên hệ</td>
+                            <td><input type="text" name="sdt" size="40" maxlength="11" minlength="10" placeholder="Điện thoại"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td>Địa chỉ Email</td>
+                            <td><input type="email" name="em" size="40" placeholder="Email" autocomplete="off"
+                                    required></td>
+                        </tr>
+                        <tr>
+                            <td>Tiêu đề</td>
+                            <td><input type="text" name="tde" size="40" maxlength="100" placeholder="Tiêu đề"
+                                    required>
+                        </tr>
+                        <tr>
+                            <td>Nội dung</td>
+                            <td><textarea name="nd" rows="5" cols="44" maxlength="500" wrap="physical"
+                                    placeholder="Nội dung liên hệ" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="submit">Gửi thông tin liên hệ</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <div class="thongtinnhom">
+                <p style="font-size: 22px; color: gray">Thông tin thành viên nhóm: </p>
+                <hr />
+                <table>
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>MSSV</th>
+                        <th>Giới tính</th>
+                        <th>Lớp</th>
+                        <th>Tỉ lệ công việc</th>
+                    </tr>
+                    <script>
+                        var thongtin = [
+                            ["Nguyễn Văn Tú", "", "Nam", "CNTT4", "%"],
+                            ["Nguyễn Hữu Ngĩa", "21012081", "Nam", "CNTT4", "%"],
+                            ["Phùng Thế Khải", "", "Nam", "CNTT5", "%"],
+                
+                        ]
+                        for (var i = 0; i < thongtin.length; i++) {
+                            document.write(
+                                `
+                                <tr>
+                                    <td>` +
+                                thongtin[i][0] + `</td>
+                                    <td>` +
+                                thongtin[i][1] + `</td>
+                                    <td>` +
+                                thongtin[i][2] + `</td>
+                                    <td>` +
+                                thongtin[i][3] + `</td>
+                                </tr>
+                            `
+                            )
+                        }
+                    </script>
+                </table>
+            </div>
+
+    </section>
+
+    <script>
+        addContainTaiKhoan();
+    </script>
+
+    <div class="footer">
+        <script>
+            addFooter();
+        </script>
+
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+
+        
+
+    
+</body>
+</html>

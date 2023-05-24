@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finn Shop</title>
+    <link rel="shortcut icon" href="images/products/logo-KayTiEn_photos_v2_x4.jpg" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tintuc.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+	<script src="js/dungchung.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTao();
+            // thêm tags (từ khóa) vào khung tìm kiếm
+            var tags = ["Áo", "Quần", "Giày", "Mũ"];
+            for (var t of tags) addTags(t, "index.html?search=" + t);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script> addTopNav();</script>
+
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+
+        <div class="body-tintuc">
+            <div class="tintuc-info">
+                <a href="https://vuahanghieu.com/tin-tuc/cach-phoi-do-voi-quan-short-nam-cho-chang-them-tu-tin-va-loi-cuon" target="_blank">
+                    <img src="images/products/Quan/10024743-A02_A_08X1.jpg">
+                    <h2>9 cách phối đồ với quần short nam thời trang và phong cách</h2>
+                </a>
+                <br/>
+                <h5>Mai Trang &emsp;3 giờ</h5>
+            </div>
+            <div class="tintuc-info">
+                <a href="https://drake.vn/cach-phoi-do-voi-giay-converse-co-cao-cho-nam" target="_blank">
+                    <img src="images/products/cach-phoi-do-voi-giay-converse-co-cao-cho-nam-12.jpg">
+                    <h2>Cách Phối Đồ với giày Converse cho Nam</h2>
+                </a>
+                <br/>
+                <h5>Drake VN &emsp; 6 giờ</h5>
+            </div>
+        </div>
+
+    </section>
+
+    <script> addContainTaiKhoan(); </script>
+
+    <div class="footer">
+        <script>addFooter();</script>
+        
+    </div>
+
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+
+</body>
+
+</html>
